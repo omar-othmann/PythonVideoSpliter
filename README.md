@@ -13,4 +13,9 @@ video = VideoSpliter(file_path_with_out_filename, filename_in_folder_path, numbe
 video.split()
 ```
 
+# screenshot
+![alt text](https://github.com/omar-othmann/PythonVideoSpliter/blob/main/example1.PNG?raw=true)
 
+![alt text](https://github.com/omar-othmann/PythonVideoSpliter/blob/main/example2.PNG?raw=true)
+
+![alt text](https://github.com/omar-othmann/PythonVideoSpliter/blob/main/example3.PNG?raw=true)
