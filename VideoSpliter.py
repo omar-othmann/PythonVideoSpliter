@@ -88,5 +88,5 @@ class VideoSpliter:
 
     
 
-video = VideoSpliter("P:/streaming/videos/Squad", "example.mp4", 3)
+video = VideoSpliter("P:/streaming/videos/Squad", "example.mp4", 10)
 video.split()
