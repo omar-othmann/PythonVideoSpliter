@@ -22,7 +22,7 @@ class ProgressFFmpeg(object):
         
     def export(self, output, cmd=None):
         if not self.is_allowed:
-            self.callback.on_error("ffmpeg not found in your Systeam did you want to download it?", do="confirm")
+            self.callback.on_error("ffmpeg not found in your System did you want to download it?", do="confirm")
             return
         cmd = cmd if cmd else 'ffmpeg -i "{file}" -vn -acodec pcm_s16le -ar 44100 -ac 2 "{output}'.format(file=self.file, output=output)
         pipe = subprocess.Popen(cmd, shell=True,
