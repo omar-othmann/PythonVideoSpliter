@@ -89,17 +89,3 @@ class ProgressFFmpeg(object):
 
     def get_result(self, how, total):
         return int(how / total * 100)
-
-class Callback:
-    def on_error(self, msg, do=None):
-        print(msg, do)
-
-    def on_progress(self, percent, current, total):
-        print(percent, current, total)
-
-    def on_finish(self):
-        print("Cover finish!!")
-        
-#cover = ProgressFFmpeg("P:/streaming/videos/Red Dead Redemption 2/Red Dead Redemption 2 2021.07.30 - 05.38.56.03.mp4")
-#cover.set_callback(Callback())
-#cover.export("P:/streaming/videos/Red Dead Redemption 2/red_dead_redem_output.wav")
