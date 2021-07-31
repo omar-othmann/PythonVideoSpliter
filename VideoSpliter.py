@@ -14,7 +14,7 @@ class VideoSpliter:
             print(msg, do)
 
         def on_progress(self, a, b, c):
-            print(a)
+            print("Start split...", a)
 
         def on_finish(self):
             print("Video split successfully!!!")
@@ -80,9 +80,6 @@ class VideoSpliter:
                 cmd = 'ffmpeg -ss "{start}" -i "{full}" -t "{end}" -c:v copy -c:a copy  "{out}"'.format(full=self.full, start=start, end=end, out=out)
             else:
                 cmd = cmd = 'ffmpeg -ss "00:{start}" -i "{full}" -t "00:{end}" -c:v copy -c:a copy  "{out}"'.format(full=self.full, start=start, end=end, out=out)
-
-            print(cmd)
-
             pro = ProgressFFmpeg(None)
             pro.set_callback(self.Progress())
             pro.export(None, cmd=cmd)
