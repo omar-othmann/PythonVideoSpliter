@@ -60,7 +60,6 @@ class VideoSpliter:
         must = float(length)
         rep = dict()
         last = 0
-        count = 0
         for i in range(0, self.number):
             start = self.length_to_time(last, hours=hours)
             end = self.length_to_time(must, hours=hours)
